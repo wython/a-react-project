@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true, // 装饰器语法
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "CommonJS", // 指定模块方式
+    "jsx": "react",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["./src/*"] // 定义和webpack alias一致，避免编辑器提示报错
+    },
+    "target": "ES5"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
