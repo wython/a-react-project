@@ -1,5 +1,5 @@
 ### 介绍
-是一个demo项目，对应博客地址：
+是一个demo项目，对应博客地址：https://github.com/wython/wython.github.io/issues/8
 ### 项目引导
 #### 启动
 #### 开发环境
