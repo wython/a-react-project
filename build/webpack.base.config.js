@@ -18,7 +18,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@': path.join(__dirname, '../src/asset')
+      '@': path.join(__dirname, '../src')
     },
     extensions: ['.ts', '.tsx', '.js', '.json'], // 默认是['.js', '.json'], ts需要扩展支持的后缀名
   }

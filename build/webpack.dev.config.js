@@ -50,12 +50,49 @@ const devConfig = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|otf)/,
+        include: srcPath,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[hash].[ext]'
+            }
+          }
+        ],
+      },
+      {
+        test: /\.css$/,
+        include: srcPath,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+        ]
+      },
+      {
+        test: /\.less$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'less-loader',
+            options: {
+              javascriptEnabled: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.(j|t)sx?$/,
         include: srcPath,
         use: 'happypack/loader?id=js'
-      }
+      },
     ]
   }
 }
-
+console.log(JSON.stringify(webpackMerge(baseConfig, devConfig)))
 module.exports = webpackMerge(baseConfig, devConfig);
